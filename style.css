@@ -1,0 +1,30 @@
+.timer {
+  font-family: Kalam;
+  color: rebeccapurple;
+  font-size: 80px;
+}
+.timer-container {
+  display: grid;
+  grid-template-columns: min-content min-content min-content min-content;
+  column-gap: 20px;
+  font-size: 30px;
+  background-image: url("./res/firefly1.webp");
+  background-position: center;
+  background-size: cover;
+  width: fit-content;
+}
+.holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(255, 255, 255, 0.5);
+  height: fit-content;
+}
+.time {
+  height: min-content;
+}
+
+.holder > p {
+  margin: 0px;
+}
