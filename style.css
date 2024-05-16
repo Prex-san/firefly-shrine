@@ -1,30 +1,86 @@
-.timer {
-  font-family: Kalam;
-  color: rebeccapurple;
-  font-size: 80px;
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+  width: 100%;
 }
+
 .timer-container {
   display: grid;
-  grid-template-columns: min-content min-content min-content min-content;
-  column-gap: 20px;
-  font-size: 30px;
+  grid-template-columns: max-content max-content max-content max-content;
+  font-size: 4rem;
   background-image: url("./res/firefly1.webp");
-  background-position: center;
   background-size: cover;
-  width: fit-content;
+  color: black;
+  background-position: center;
 }
 .holder {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 255, 255, 0.5);
-  height: fit-content;
+  background-color: rgb(255, 255, 255, 0.4);
+  height: max-content;
+  padding: 2rem;
 }
 .time {
-  height: min-content;
+  height: max-content;
+  width: max-content;
+}
+h1 {
+  font-size: 6rem;
 }
 
 .holder > p {
-  margin: 0px;
+  font-size: 2rem;
+  margin: 0;
+  width: max-content;
+}
+html {
+  background-color: black;
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: aliceblue;
+  font-family: Kalam;
+  font-size: 2rem;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+footer {
+  background-color: aliceblue;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  align-items: center;
+}
+footer > a {
+  text-decoration: none;
+  color: black;
+  font-family: Kalam;
+  font-size: 1.3rem;
+}
+footer > a:hover {
+  text-decoration: none;
+  color: rebeccapurple;
+  font-family: Kalam;
+}
+
+footer > img {
+  height: 2rem;
+  width: 2rem;
+  padding: 0.4rem;
+}
+
+footer > img:hover {
+  cursor: pointer;
 }
