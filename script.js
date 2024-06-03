@@ -1,4 +1,9 @@
 let timer = new Date(2024, 5, 19, 10, 0, 0, 0);
+let counter_hours = document.querySelector(".hours");
+let counter_days = document.querySelector(".days");
+let counter_minutes = document.querySelector(".minutes");
+let counter_seconds = document.querySelector(".seconds");
+
 let counterInterval = setInterval(function () {
   let currentDate = new Date().getTime();
   let timeRemaining = timer - currentDate;
@@ -8,11 +13,6 @@ let counterInterval = setInterval(function () {
   );
   let minutes = Math.floor((timeRemaining % (1000 * 60 * 60)) / (1000 * 60));
   let seconds = Math.floor((timeRemaining % (1000 * 60)) / 1000);
-
-  let counter_hours = document.querySelector(".hours");
-  let counter_days = document.querySelector(".days");
-  let counter_minutes = document.querySelector(".minutes");
-  let counter_seconds = document.querySelector(".seconds");
 
   counter_days.innerHTML = `${days}`;
   counter_hours.innerHTML = `${hours}`;
