@@ -9,6 +9,8 @@ html {
   height: 100%;
 }
 
+$star_color: #dbe9f4;
+
 body {
   font-family: "Barlow";
   font-weight: 400;
@@ -22,4 +24,78 @@ body {
     rgba(255, 224, 164, 1) 100%
   );
   background-repeat: no-repeat;
+}
+
+.star {
+  position: absolute;
+  background-color: $star_color;
+  height: 0.1rem;
+  width: 0.1rem;
+  border-radius: 50%;
+  bottom: 50vh;
+  display: inline-block;
+  left: 50vw;
+  text-align: center;
+  filter: blur(0.05rem);
+  animation: blink 0.5s infinite ease;
+  &::after {
+    position: relative;
+  }
+}
+
+@keyframes blink {
+  0% {
+    height: 0.05rem;
+    width: 0.05rem;
+    opacity: 40%;
+  }
+  100% {
+    height: 0.1rem;
+    width: 0.1rem;
+    opacity: 100%;
+  }
+}
+
+.background_star {
+  background-image: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png);
+  background-repeat: repeat;
+  background-size: cover;
+  height: 65vh;
+  width: 100%;
+  position: absolute;
+  z-index: -4;
+}
+
+.cloud--1 {
+  background: transparent url(./res/cloud_2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 100%;
+  opacity: 80%;
+  position: absolute;
+  z-index: -2;
+  left: 50%;
+  top: 20%;
+  animation: move_clouds linear 70s infinite;
+}
+.cloud--2 {
+  background: transparent url(./res/cloud_2.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 50vh;
+  width: 100%;
+  opacity: 60%;
+  position: absolute;
+  z-index: -3;
+  animation: move_clouds linear 100s infinite;
+}
+
+@keyframes move_clouds {
+  0% {
+    transform: translateX(-80%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
 }
